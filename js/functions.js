@@ -30,7 +30,7 @@ let getNumberFromStr = function (str) {
 
 // eslint-disable-next-line prefer-const
 let stringAdder = function (strIn, len, strAdd) {
-  if (strIn.lenth >= len) {
+  if (strIn.length >= len) {
     return strIn;
   }
 
@@ -46,7 +46,7 @@ let stringAdder = function (strIn, len, strAdd) {
 // eslint-disable-next-line no-console
 console.log(checkStringLen('word', 4));
 console.log(checkStringPalindrom('abba abba'));
-console.log(getNumberFromStr('123adsf4 v fdgdf 99         dsfn1'));
+console.log(getNumberFromStr('123 r 34    dj,.df/df66'));
 console.log(stringAdder('1', 2, '0'));
 console.log(stringAdder('1', 4, '0'));
 console.log(stringAdder('q', 4, 'werty'));
