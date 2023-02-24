@@ -44,11 +44,11 @@ let stringAdder = function (strIn, len, strAdd) {
 };
 
 // eslint-disable-next-line no-console
-console.log(checkStringLen('word', 4));
-console.log(checkStringPalindrom('abba abba'));
-console.log(getNumberFromStr('123 r 34    dj,.df/df66'));
-console.log(stringAdder('1', 2, '0'));
-console.log(stringAdder('1', 4, '0'));
-console.log(stringAdder('q', 4, 'werty'));
-console.log(stringAdder('q', 4, 'we'));
-console.log(stringAdder('qwerty', 4, '0'));
+// console.log(checkStringLen('word', 4));
+// console.log(checkStringPalindrom('abba abba'));
+// console.log(getNumberFromStr('123 r 34    dj,.df/df66'));
+// console.log(stringAdder('1', 2, '0'));
+// console.log(stringAdder('1', 4, '0'));
+// console.log(stringAdder('q', 4, 'werty'));
+// console.log(stringAdder('q', 4, 'we'));
+// console.log(stringAdder('qwerty', 4, '0'));
