@@ -8,18 +8,40 @@ const randomInteger = function (min, max) {
 
 const randomArrayElement = (elements) => elements[randomInteger(0, elements.length - 1)];
 
-const createDescription = () => ({
-  id: randomInteger(1, 25),
-  url: `photos/${randomInteger(1, 25)}.jpg`,
-  description: randomArrayElement(DESCRIPTIONS),
-  likes: randomInteger(15, 200),
-  comments:
-  {
-    id: randomInteger(1, 2500),
-    avatar: `img/avatar/${randomInteger(1, 6)}.svg`,
-    message: randomArrayElement(COMMENTS),
-    name: randomArrayElement(NAMES)
-  }
+const createIdGenerator = () => {
+  let lastGeneratedId = 0;
+
+  return () => {
+    lastGeneratedId += 1;
+    return lastGeneratedId;
+  };
+};
+
+const generateCommentId = createIdGenerator();
+
+const createMessage = () => 
+Array.from({ length: randomInteger(1, 2)}, () =>
+randomArrayElement(COMMENTS));
+
+const createComment = () => ({
+  id: generateCommentId(),
+  avatar: 'img/avatar-${randomInteger(1, 6)}.svg',
+  message: createMessage(),
+  name: randomArrayElement(NAMES),
 });
 
-export {createDescription};
+const createPicture = (index) => ({
+  id: index,
+  url: `photos/${index}.jpg`,
+  description: randomArrayElement(DESCRIPTIONS),
+  likes: randomInteger(15, 200),
+  comments: Array.from(
+    { length: randomInteger(0, 5)}, createComment
+  ),
+});
+
+const getPictures = () =>
+Array.from({ length: 25}, (_, pictureIndex) =>
+createPicture(pictureIndex + 1));
+
+export {getPictures};
