@@ -1,6 +1,5 @@
 import './data.js';
-import {createDescription} from './util.js';
+import {renderMiniatures} from './drawingMiniatures.js';
+import {getPictures} from './util.js';
 
-const descriptions = Array.from({ length: 4 }, createDescription);
-
-console.log(descriptions);
+renderMiniatures(getPictures());
