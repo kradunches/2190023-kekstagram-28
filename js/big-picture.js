@@ -36,7 +36,7 @@ const onDocumentEscapeKeydown = (evt) => {
   }
 };
 
-const body = document.querySelector('body');
+const body = document.body;
 
 function closeUserModal () {
   bigPicture.classList.add('hidden');
