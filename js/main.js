@@ -1,5 +1,5 @@
-import './data.js';
-import {renderMiniatures} from './drawingMiniatures.js';
-import {getPictures} from './util.js';
+import {renderPictures} from './rendering-pictures.js';
+import {initUploadPictureModule} from './upload-picture.js';
 
-renderMiniatures(getPictures());
+renderPictures();
+initUploadPictureModule();
