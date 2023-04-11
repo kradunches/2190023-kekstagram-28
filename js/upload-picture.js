@@ -5,7 +5,6 @@ import { renderSuccessMessage, renderErrorMessage } from './upload-picture-send-
 import { sendData } from './server-data.js';
 
 const SEND_DATA_URL = 'https://28.javascript.pages.academy/kekstagram';
-
 const pictureUploadForm = document.querySelector('.img-upload__form');
 const pictureUploadInput = document.querySelector('#upload-file');
 const pictureUploadPreview = document.querySelector('.img-upload__preview img');
